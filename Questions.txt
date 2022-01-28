@@ -1,0 +1,13 @@
+What year is it now?
+The best programming language
+How many bits are in a byte?
+How many bits does a char variable take up?
+What is the word programmers call errors in the code?
+Year of birth of the Internet?
+Which version of the c++ language is the newest version?
+The most famous C++ framework?
+A programming language that is used most often in front-end development and ends with the letter 'p'?
+A programming language that is used to speed up the execution of an application?
+How many bytes does an int variable occupy on average?
+How many bytes does a char variable occupy on average?
+In what year was Bjarne Stroustrup's born?
