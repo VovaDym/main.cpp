@@ -37,8 +37,13 @@ int main() {
     int players = 0;
     while (passedSectors.size() < 13)
     {
-        std::ifstream fileQuest ("C:\\Users\\777\\CLionProjects\\19.5.5\\Questions.txt");
-
+        std::ifstream fileQuest ;
+        fileQuest.open("Questions.txt");
+        if(!fileQuest.is_open())
+        {
+            std::cout << "Error! FileQuestions is not open ";
+            return 0;
+        }
         std::cout << "Rotate turntable: " << std::endl;
         std::cin >> n;
         nSector = nSector + n;
@@ -56,7 +61,7 @@ int main() {
         std::cout << " Sector: " << nSector << " << QUESTION!!! >>: ";
         std::string strQuest;
         for (int j = 1; j < nSector; j++)
-            fileQuest.ignore(256, '\n');
+            fileQuest.ignore(256, '\n');// reads all characters before the line break
         if (!fileQuest.eof())
         {
             getline(fileQuest, strQuest);
@@ -65,15 +70,20 @@ int main() {
         fileQuest.close();
         std::cin.get();
 
-        std::ifstream fileAnswer ("C:\\Users\\777\\CLionProjects\\19.5.5\\Answers.txt");
-
+        std::ifstream fileAnswer ;
+        fileAnswer.open("Answers.txt");
+        if(!fileAnswer.is_open())
+        {
+            std::cout << "Error! FileAnswers is not open ";
+            return 0;
+        }
         std::string answer;
         std::string strAnswer;
         std::cout << "Enter your answer: " << std::endl;
         std::cin >> answer;
 
         for (int j = 1; j < nSector; j++)
-            fileAnswer.ignore(256, '\n');
+            fileAnswer.ignore(256, '\n');// reads all characters before the line break
         if (!fileAnswer.eof())
         {
             getline(fileAnswer, strAnswer);
