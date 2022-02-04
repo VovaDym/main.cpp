@@ -39,7 +39,7 @@ int main() {
     {
         std::ifstream fileQuest ;
         fileQuest.open("Questions.txt");
-        if(!fileQuest.is_open())
+        if (!fileQuest.is_open())
         {
             std::cout << "Error! FileQuestions is not open ";
             return 0;
@@ -47,12 +47,12 @@ int main() {
         std::cout << "Rotate turntable: " << std::endl;
         std::cin >> n;
         nSector = nSector + n;
-        if(nSector > 13)
+        if (nSector > 13)
         {
             nSector = nSector % 13;
             if (nSector == 0) nSector = 1;
         }
-        while(!(sectorCurrent(passedSectors,nSector)))
+        while (!(sectorCurrent(passedSectors,nSector)))
         {
             nSector++;
             if (nSector > 13 || nSector == 0) nSector = 1;
@@ -75,7 +75,7 @@ int main() {
 
         std::ifstream fileAnswer ;
         fileAnswer.open("Answers.txt");
-        if(!fileAnswer.is_open())
+        if (!fileAnswer.is_open())
         {
             std::cout << "Error! FileAnswers is not open ";
             return 0;
@@ -93,7 +93,7 @@ int main() {
         if (!fileAnswer.eof())
         {
             getline(fileAnswer, strAnswer);
-            if(strAnswer == answer)
+            if (strAnswer == answer)
             {
                 ++players;
                 std::cout << "The answer is correct." << std::endl;
