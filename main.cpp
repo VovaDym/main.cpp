@@ -61,7 +61,10 @@ int main() {
         std::cout << " Sector: " << nSector << " << QUESTION!!! >>: ";
         std::string strQuest;
         for (int j = 1; j < nSector; j++)
-            fileQuest.ignore(256, '\n');// reads all characters before the line break
+        {
+            fileQuest.ignore(256, '\n');// go to the desired line in the file
+        }
+
         if (!fileQuest.eof())
         {
             getline(fileQuest, strQuest);
@@ -83,7 +86,10 @@ int main() {
         std::cin >> answer;
 
         for (int j = 1; j < nSector; j++)
-            fileAnswer.ignore(256, '\n');// reads all characters before the line break
+        {
+            fileAnswer.ignore(256, '\n');// go to the desired line in the file
+        }
+
         if (!fileAnswer.eof())
         {
             getline(fileAnswer, strAnswer);
